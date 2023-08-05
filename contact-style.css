@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Comfortaa:wght@300;400;500;700&family=Roboto:wght@100;300&family=Short+Stack&display=swap');
+
+:root {
+    --font-Borel: 'Borel', cursive;
+    --font-ShortStack: 'Short Stack', cursiv;
+    --font-Comfortaa: 'Comfortaa', cursive;
+    --main-green: hsl(112, 40%, 67%);
+    --main-dark: hsl(223, 9%, 15%);
+    --main-dark-p: hsla(223, 9%, 15%, 0.500);
+}
+
+/* selection & scrollbar start */
+
+::selection {
+    background-color: var(--main-dark);
+    color: var(--main-green);
+}
+
+::-webkit-scrollbar {
+    background-color: var(--main-dark);
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-green);
+    box-shadow: 0 0 2px 1px hsl(112, 40%, 50%) inset;
+}
+
+/* selection & scrollbar end */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-ShortStack);
+}
+
+
+/* contact start */
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(50, 19%, 90%);
+}
+
+.contact .row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    flex-direction: row;
+}
+
+.col-1 {
+    margin-right: 140px;
+    border: solid 3px var(--main-green);
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.col-2 {
+    margin-left: 40px;
+}
+
+iframe {
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.col-2 h1 {
+    font-family: var(--font-Borel);
+    font-size: 50px;
+    text-align: center;
+}
+
+form input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px var(--main-green) solid;
+    padding: 10px;
+    margin-bottom: 80px;
+    font-size: 15px;
+    font-family: var(--font-Comfortaa);
+    width: 300px;
+}
+
+button {
+    border: solid 1px var(--main-green);
+    background-color: transparent;
+    color: var(--main-green);
+    width: 280px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+    font-family: 'Comfortaa', cursive;
+}
+
+button:hover {
+    color: #f2f1ec;
+    transition: 1s;
+}
+
+button span {
+    background-color: var(--main-green);
+    width: 0;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 1s;
+}
+
+button:hover span {
+    width: 100%;
+    transition: 1s;
+}
+
+
+/* contact end */
+
+
+
